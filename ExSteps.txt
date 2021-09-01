@@ -1,0 +1,47 @@
+1/9/21
+
+Prettify PowerShell terminal display - making command prompt more user friendly:
+https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh
+
+Turn on Auto Save in VS code!
+
+1. Git Fork + Clone
+- Log into GitHub
+- Go to source repo
+- Select 'Fork'
+- Check own GitHub
+- Clone the repo in VS code PowerShell
+
+> git clone (http link)
+> dotnet new gitignore //so that binary files don't get pushed to repo, only codes
+
+'pwd' for path
+'dir' to view folder content
+'dotnet -- version' to check if installed & more info
+
+2. Create Class Library in C#  //for business logic
+?? File > New > template???
+Change filename to contact.cs
+
+3. Create solution + adding project 
+* Ensure in repo root directory
+> dotnet new sln
+> dotnet sln add (project name, e.g. ContactLib/ContactLib.csproj)
+
+4. Create API + link to C# project
+> dotnet sln new webapi -o ContactApi
+> dotnet sln add ContactApi/ContactApi.csproj
+
+> code ContactApi //open project in new VS code window
+Duplicate the WeatherForecastController.cs and save a copy as ContactController.cs
+
+> dotnet add reference ../ContactLib/ContactLib.csproj  
+check that 'using ContactLib;' has been added to the top of the file.
+
+5. Work with the Controller
+
+---
+Next week... continue to work on API, instantiate object from class
+Also, contact to DB to get data & UI get/post methods
+@ Check how to do step 2 above
+@ To go through Unit Tests 
